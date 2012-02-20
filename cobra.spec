@@ -10,6 +10,7 @@ License:	LGPL
 URL:		http://lobobrowser.org/cobra.jsp
 Source0:	http://sourceforge.net/projects/xamj/files/Cobra%20HTML%20Toolkit/%{version}/%{name}-%{version}.zip
 Patch0:		cobra-0.98.4-fontclass.patch
+Patch1:		cobra-0.98.4-import.patch
 BuildRequires:	dos2unix
 BuildRequires:	java-devel-openjdk
 BuildRequires:	rhino
@@ -42,6 +43,7 @@ Javadoc for package cobra.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 dos2unix     *.txt doc/api/stylesheet.css
 %__chmod 644 *.txt doc/api/stylesheet.css
