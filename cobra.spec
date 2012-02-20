@@ -34,8 +34,8 @@ in the parsed DOM, unless Javascript is disabled.
 
 %package javadoc
 Summary:	Javadoc for cobra
-Group:		Documentation/HTML
-PreReq:		coreutils
+Group:		Documentation
+Requires:	coreutils
 
 %description javadoc
 Javadoc for package cobra.
