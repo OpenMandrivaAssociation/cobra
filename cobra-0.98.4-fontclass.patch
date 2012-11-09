@@ -1,0 +1,22 @@
+diff -urN cobra-0.98.4/src/org/lobobrowser/util/gui/FontFactory.java cobra-0.98.4-patched/src/org/lobobrowser/util/gui/FontFactory.java
+--- cobra-0.98.4/src/org/lobobrowser/util/gui/FontFactory.java	2008-12-28 17:33:38.000000000 +1000
++++ cobra-0.98.4-patched/src/org/lobobrowser/util/gui/FontFactory.java	2012-02-21 01:15:22.122719934 +1100
+@@ -29,8 +29,6 @@
+ import java.util.logging.*;
+ 
+ import org.lobobrowser.util.Objects;
+-/** Note: Undocumented class? */
+-import sun.font.FontManager;
+ 
+ /**
+  * @author J. H. S.
+@@ -206,8 +204,7 @@
+ 	}
+ 	
+ 	private Font createFont(String name, int style, int size) {
+-		// Proprietary Sun API. Maybe shouldn't use it. Works well for Chinese.
+-	    return FontManager.getCompositeFontUIResource(new Font(name, style, size));
++	    return javax.swing.text.StyleContext.getDefaultStyleContext().getFont(name, style, size);
+ 	}
+ 	
+ 	private static class FontKey {

@@ -1,0 +1,109 @@
+diff -urN cobra-0.98.4/src/org/lobobrowser/html/domimpl/ElementImpl.java cobra-0.98.4-patched/src/org/lobobrowser/html/domimpl/ElementImpl.java
+--- cobra-0.98.4/src/org/lobobrowser/html/domimpl/ElementImpl.java	2008-08-26 18:43:10.000000000 +1100
++++ cobra-0.98.4-patched/src/org/lobobrowser/html/domimpl/ElementImpl.java	2012-02-21 02:06:04.000000000 +1100
+@@ -23,7 +23,16 @@
+  */
+ package org.lobobrowser.html.domimpl;
+ 
+-import java.util.*;
++import java.util.Set;
++import java.util.Collection;
++import java.util.Iterator;
++import java.util.HashSet;
++import java.util.ArrayList;
++import java.util.Map;
++import java.util.HashMap;
++import java.util.List;
++import java.util.LinkedList;
++import java.util.Collections;
+ 
+ import org.lobobrowser.util.*;
+ import org.w3c.dom.Attr;
+diff -urN cobra-0.98.4/src/org/lobobrowser/html/domimpl/NodeImpl.java cobra-0.98.4-patched/src/org/lobobrowser/html/domimpl/NodeImpl.java
+--- cobra-0.98.4/src/org/lobobrowser/html/domimpl/NodeImpl.java	2008-09-28 10:05:54.000000000 +1100
++++ cobra-0.98.4-patched/src/org/lobobrowser/html/domimpl/NodeImpl.java	2012-02-21 02:03:41.000000000 +1100
+@@ -25,7 +25,16 @@
+ 
+ import java.net.MalformedURLException;
+ import java.net.URL;
+-import java.util.*;
++import java.util.Set;
++import java.util.Collection;
++import java.util.Iterator;
++import java.util.HashSet;
++import java.util.ArrayList;
++import java.util.LinkedList;
++import java.util.Map;
++import java.util.HashMap;
++import java.util.List;
++import java.util.Collections;
+ import java.util.logging.*;
+ 
+ import org.lobobrowser.html.*;
+diff -urN cobra-0.98.4/src/org/lobobrowser/html/gui/HtmlBlockPanel.java cobra-0.98.4-patched/src/org/lobobrowser/html/gui/HtmlBlockPanel.java
+--- cobra-0.98.4/src/org/lobobrowser/html/gui/HtmlBlockPanel.java	2009-01-15 08:02:02.000000000 +1000
++++ cobra-0.98.4-patched/src/org/lobobrowser/html/gui/HtmlBlockPanel.java	2012-02-21 01:55:15.000000000 +1100
+@@ -37,7 +37,11 @@
+ import org.lobobrowser.util.gui.ColorFactory;
+ import org.w3c.dom.*;
+ import java.util.logging.*;
+-import java.util.*;
++import java.util.Set;
++import java.util.Collection;
++import java.util.Iterator;
++import java.util.HashSet;
++import java.util.ArrayList;
+ 
+ /**
+  * A Swing component that renders a HTML block, given 
+diff -urN cobra-0.98.4/src/org/lobobrowser/html/renderer/RBlock.java cobra-0.98.4-patched/src/org/lobobrowser/html/renderer/RBlock.java
+--- cobra-0.98.4/src/org/lobobrowser/html/renderer/RBlock.java	2009-01-18 19:02:54.000000000 +1000
++++ cobra-0.98.4-patched/src/org/lobobrowser/html/renderer/RBlock.java	2012-02-21 02:00:57.000000000 +1100
+@@ -23,7 +23,14 @@
+  */
+ package org.lobobrowser.html.renderer;
+ 
+-import java.util.*;
++import java.util.Set;
++import java.util.Collection;
++import java.util.Iterator;
++import java.util.HashSet;
++import java.util.ArrayList;
++import java.util.Map;
++import java.util.Hashtable;
++import java.util.NoSuchElementException;
+ import java.util.logging.*;
+ 
+ import java.awt.*;
+diff -urN cobra-0.98.4/src/org/lobobrowser/html/renderer/RTable.java cobra-0.98.4-patched/src/org/lobobrowser/html/renderer/RTable.java
+--- cobra-0.98.4/src/org/lobobrowser/html/renderer/RTable.java	2009-01-18 16:09:50.000000000 +1000
++++ cobra-0.98.4-patched/src/org/lobobrowser/html/renderer/RTable.java	2012-02-21 02:07:34.000000000 +1100
+@@ -25,7 +25,15 @@
+ 
+ import java.awt.*;
+ import java.awt.event.MouseEvent;
+-import java.util.*;
++import java.util.Set;
++import java.util.Collection;
++import java.util.Iterator;
++import java.util.HashSet;
++import java.util.ArrayList;
++import java.util.Map;
++import java.util.HashMap;
++import java.util.SortedSet;
++import java.util.TreeSet;
+ 
+ import org.lobobrowser.html.*;
+ import org.lobobrowser.util.*;
+diff -urN cobra-0.98.4/src/org/lobobrowser/js/JavaFunctionObject.java cobra-0.98.4-patched/src/org/lobobrowser/js/JavaFunctionObject.java
+--- cobra-0.98.4/src/org/lobobrowser/js/JavaFunctionObject.java	2007-12-08 11:51:52.000000000 +1000
++++ cobra-0.98.4-patched/src/org/lobobrowser/js/JavaFunctionObject.java	2012-02-21 02:09:07.000000000 +1100
+@@ -23,7 +23,7 @@
+ import org.mozilla.javascript.*;
+ import java.lang.reflect.*;
+ import java.util.logging.*;
+-import java.util.*;
++import java.util.ArrayList;
+ import org.lobobrowser.util.*;
+ 
+ public class JavaFunctionObject extends ScriptableObject implements Function {
