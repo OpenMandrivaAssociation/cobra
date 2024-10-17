@@ -7,7 +7,7 @@ Release:	%mkrel 1
 Summary:	Java HTML Renderer & Parser
 Group:		Development/Java
 License:	LGPL
-URL:		http://lobobrowser.org/cobra.jsp
+URL:		https://lobobrowser.org/cobra.jsp
 Source0:	http://sourceforge.net/projects/xamj/files/Cobra%20HTML%20Toolkit/%{version}/%{name}-%{version}.zip
 Patch0:		cobra-0.98.4-fontclass.patch
 Patch1:		cobra-0.98.4-import.patch
