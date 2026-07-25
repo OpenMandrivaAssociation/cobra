@@ -3,7 +3,7 @@
 
 Name:		cobra
 Version:	0.98.4
-Release:	%mkrel 1
+Release:	2
 Summary:	Java HTML Renderer & Parser
 Group:		Development/Java
 License:	LGPL
